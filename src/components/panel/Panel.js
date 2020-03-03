@@ -11,20 +11,29 @@ import './panel.scss';
 const Panel = () => {
   const { word } = useContext(GlobalContext)
 
-  const [step, setStep] = useState(9)
+  const [step, setStep] = useState(27)
+  const [animationSteps, setAnimationSteps] = useState(0)
   const [lights, setLights] = useState([])
 
   useEffect(() => {
     setLights(getWordLights(word))
 
-    console.log(getAnimationSteps(17, word))
+    setAnimationSteps(getAnimationSteps(17, word))
 
     addStep()
     // eslint-disable-next-line
   }, [word])
 
   const addStep = () => {
+    console.log(step)
+    
     setTimeout(() => {
+      if(step > animationSteps) {
+        setStep(0)
+      } else {
+        setStep(step + 1)
+      }
+      
       setStep(step + 1)
 
       // addStep()

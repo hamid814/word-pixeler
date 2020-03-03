@@ -1,322 +1,390 @@
-const liht = 1; // = light
-const dark = 0;
-
 const letters = {
   A: {
     name: 'A',
-    width: 4,
-    height: 7,
     cols: [
-      [liht,liht,liht,liht,liht,liht,liht],
-      [dark,dark,dark,liht,dark,dark,liht],
-      [dark,dark,dark,liht,dark,dark,liht],
-      [liht,liht,liht,liht,liht,liht,liht]
+      [1,1,1,1,1,1,1],
+      [0,0,0,1,0,0,1],
+      [0,0,0,1,0,0,1],
+      [1,1,1,1,1,1,1]
     ]
   },
   B: {
     name: 'B',
-    width: 4,
-    height: 7,
     cols: [
-      [liht,liht,liht,liht,liht,liht,liht],
-      [liht,dark,dark,liht,dark,dark,liht],
-      [liht,dark,dark,liht,dark,dark,liht],
-      [dark,liht,liht,dark,liht,liht,dark]
+      [1,1,1,1,1,1,1],
+      [1,0,0,1,0,0,1],
+      [1,0,0,1,0,0,1],
+      [0,1,1,0,1,1,0]
     ]
   },
   C: {
     name: 'C',
-    width: 4,
-    height: 7,
     cols: [
-      [liht,liht,liht,liht,liht,liht,liht],
-      [liht,dark,dark,dark,dark,dark,liht],
-      [liht,dark,dark,dark,dark,dark,liht],
-      [liht,liht,dark,dark,dark,liht,liht]
+      [1,1,1,1,1,1,1],
+      [1,0,0,0,0,0,1],
+      [1,0,0,0,0,0,1],
+      [1,1,0,0,0,1,1]
     ]
   },
   D: {
     name: 'D',
-    width: 4,
-    height: 7,
     cols: [
-      [liht,liht,liht,liht,liht,liht,liht],
-      [liht,dark,dark,dark,dark,dark,liht],
-      [liht,dark,dark,dark,dark,dark,liht],
-      [dark,liht,liht,liht,liht,liht,dark]
+      [1,1,1,1,1,1,1],
+      [1,0,0,0,0,0,1],
+      [1,0,0,0,0,0,1],
+      [0,1,1,1,1,1,0]
     ]
   },
   E: {
     name: 'E',
-    width: 4,
-    height: 7,
     cols: [
-      [liht,liht,liht,liht,liht,liht,liht],
-      [liht,dark,dark,liht,dark,dark,liht],
-      [liht,dark,dark,liht,dark,dark,liht],
-      [liht,dark,dark,dark,dark,dark,liht]
+      [1,1,1,1,1,1,1],
+      [1,0,0,1,0,0,1],
+      [1,0,0,1,0,0,1],
+      [1,0,0,0,0,0,1]
     ]
   },
   F: {
     name: 'F',
-    width: 4,
-    height: 7,
     cols: [
-      [liht,liht,liht,liht,liht,liht,liht],
-      [dark,dark,dark,liht,dark,dark,liht],
-      [dark,dark,dark,liht,dark,dark,liht],
-      [dark,dark,dark,dark,dark,dark,liht]
+      [1,1,1,1,1,1,1],
+      [0,0,0,1,0,0,1],
+      [0,0,0,1,0,0,1],
+      [0,0,0,0,0,0,1]
     ]
   },
   G: {
     name: 'G',
-    width: 4,
-    height: 7,
     cols: [
-      [liht,liht,liht,liht,liht,liht,liht],
-      [liht,dark,dark,dark,dark,dark,liht],
-      [liht,dark,liht,dark,dark,dark,liht],
-      [liht,liht,liht,dark,dark,liht,liht]
+      [1,1,1,1,1,1,1],
+      [1,0,0,0,0,0,1],
+      [1,0,1,0,0,0,1],
+      [1,1,1,0,0,1,1]
     ]
   },
   H: {
     name: 'H',
-    width: 4,
-    height: 7,
     cols: [
-      [liht,liht,liht,liht,liht,liht,liht],
-      [dark,dark,dark,liht,dark,dark,dark],
-      [dark,dark,dark,liht,dark,dark,dark],
-      [liht,liht,liht,liht,liht,liht,liht]
+      [1,1,1,1,1,1,1],
+      [0,0,0,1,0,0,0],
+      [0,0,0,1,0,0,0],
+      [1,1,1,1,1,1,1]
     ]
   },
   I: {
     name: 'I',
-    width: 3,
-    height: 7,
     cols: [
-      [liht,dark,dark,dark,dark,dark,liht],
-      [liht,liht,liht,liht,liht,liht,liht],
-      [liht,dark,dark,dark,dark,dark,liht],
+      [1,0,0,0,0,0,1],
+      [1,1,1,1,1,1,1],
+      [1,0,0,0,0,0,1],
     ]
   },
   J: {
     name: 'J',
-    width: 4,
-    height: 7,
     cols: [
-      [liht,liht,dark,dark,dark,dark,dark],
-      [liht,dark,dark,dark,dark,dark,liht],
-      [liht,liht,liht,liht,liht,liht,liht],
-      [dark,dark,dark,dark,dark,dark,liht],
+      [1,1,0,0,0,0,0],
+      [1,0,0,0,0,0,1],
+      [1,1,1,1,1,1,1],
+      [0,0,0,0,0,0,1],
     ]
   },
   K: {
     name: 'K',
-    width: 5,
-    height: 7,
     cols: [
-      [liht,liht,liht,liht,liht,liht,liht],
-      [dark,dark,dark,liht,dark,dark,dark],
-      [dark,dark,liht,dark,liht,dark,dark],
-      [dark,liht,dark,dark,dark,liht,dark],
-      [liht,dark,dark,dark,dark,dark,liht],
+      [1,1,1,1,1,1,1],
+      [0,0,0,1,0,0,0],
+      [0,0,1,0,1,0,0],
+      [0,1,0,0,0,1,0],
+      [1,0,0,0,0,0,1],
     ]
   },
   L: {
     name: 'L',
-    width: 4,
-    height: 7,
     cols: [
-      [liht,liht,liht,liht,liht,liht,liht],
-      [liht,dark,dark,dark,dark,dark,dark],
-      [liht,dark,dark,dark,dark,dark,dark],
-      [liht,dark,dark,dark,dark,dark,dark],
+      [1,1,1,1,1,1,1],
+      [1,0,0,0,0,0,0],
+      [1,0,0,0,0,0,0],
+      [1,0,0,0,0,0,0],
     ]
   },
   M: {
     name: 'M',
-    width: 7,
-    height: 7,
     cols: [
-      [liht,liht,liht,liht,liht,liht,liht],
-      [dark,dark,dark,dark,dark,liht,dark],
-      [dark,dark,dark,dark,liht,dark,dark],
-      [dark,dark,dark,liht,dark,dark,dark],
-      [dark,dark,dark,dark,liht,dark,dark],
-      [dark,dark,dark,dark,dark,liht,dark],
-      [liht,liht,liht,liht,liht,liht,liht],
+      [1,1,1,1,1,1,1],
+      [0,0,0,0,0,0,1],
+      [0,0,1,1,1,1,1],
+      [0,0,0,0,0,0,1],
+      [1,1,1,1,1,1,1],
     ]
   },
   N: {
     name: 'N',
-    width: 5,
-    height: 7,
     cols: [
-      [liht,liht,liht,liht,liht,liht,liht],
-      [dark,dark,dark,dark,liht,dark,dark],
-      [dark,dark,dark,liht,dark,dark,dark],
-      [dark,dark,liht,dark,dark,dark,dark],
-      [liht,liht,liht,liht,liht,liht,liht],
+      [1,1,1,1,1,1,1],
+      [0,0,0,0,1,0,0],
+      [0,0,0,1,0,0,0],
+      [0,0,1,0,0,0,0],
+      [1,1,1,1,1,1,1],
     ]
   },
   O: {
     name: 'O',
-    width: 4,
-    height: 7,
     cols: [
-      [liht,liht,liht,liht,liht,liht,liht],
-      [liht,dark,dark,dark,dark,dark,liht],
-      [liht,dark,dark,dark,dark,dark,liht],
-      [liht,liht,liht,liht,liht,liht,liht],
+      [1,1,1,1,1,1,1],
+      [1,0,0,0,0,0,1],
+      [1,0,0,0,0,0,1],
+      [1,1,1,1,1,1,1],
     ]
   },
   P: {
     name: 'P',
-    width: 4,
-    height: 7,
     cols: [
-      [liht,liht,liht,liht,liht,liht,liht],
-      [dark,dark,dark,liht,dark,dark,liht],
-      [dark,dark,dark,liht,dark,dark,liht],
-      [dark,dark,dark,liht,liht,liht,liht],
+      [1,1,1,1,1,1,1],
+      [0,0,0,1,0,0,1],
+      [0,0,0,1,0,0,1],
+      [0,0,0,1,1,1,1],
     ]
   },
   Q: {
     name: 'Q',
-    width: 4,
-    height: 7,
     cols: [
-      [liht,liht,liht,liht,liht,liht,liht],
-      [liht,dark,dark,dark,dark,dark,liht],
-      [liht,liht,liht,liht,liht,liht,liht],
-      [liht,dark,dark,dark,dark,dark,dark],
+      [1,1,1,1,1,1,1],
+      [1,0,0,0,0,0,1],
+      [1,1,1,1,1,1,1],
+      [1,0,0,0,0,0,0],
     ]
   },
   R: {
     name: 'R',
-    width: 4,
-    height: 7,
     cols: [
-      [liht,liht,liht,liht,liht,liht,liht],
-      [dark,dark,liht,liht,dark,dark,liht],
-      [dark,liht,dark,liht,dark,dark,liht],
-      [liht,dark,dark,liht,liht,liht,liht],
+      [1,1,1,1,1,1,1],
+      [0,0,1,1,0,0,1],
+      [0,1,0,1,0,0,1],
+      [1,0,0,1,1,1,1],
     ]
   },
   S: {
     name: 'S',
-    width: 4,
-    height: 7,
     cols: [
-      [liht,dark,dark,liht,liht,liht,liht],
-      [liht,dark,dark,liht,dark,dark,liht],
-      [liht,dark,dark,liht,dark,dark,liht],
-      [liht,liht,liht,liht,dark,dark,liht],
+      [1,0,0,1,1,1,1],
+      [1,0,0,1,0,0,1],
+      [1,0,0,1,0,0,1],
+      [1,1,1,1,0,0,1],
     ]
   },
   T: {
     name: 'T',
-    width: 5,
-    height: 7,
     cols: [
-      [dark,dark,dark,dark,dark,dark,liht],
-      [dark,dark,dark,dark,dark,dark,liht],
-      [liht,liht,liht,liht,liht,liht,liht],
-      [dark,dark,dark,dark,dark,dark,liht],
-      [dark,dark,dark,dark,dark,dark,liht],
+      [0,0,0,0,0,0,1],
+      [0,0,0,0,0,0,1],
+      [1,1,1,1,1,1,1],
+      [0,0,0,0,0,0,1],
+      [0,0,0,0,0,0,1],
     ]
   },
   U: {
     name: 'U',
-    width: 4,
-    height: 7,
     cols: [
-      [liht,liht,liht,liht,liht,liht,liht],
-      [liht,dark,dark,dark,dark,dark,dark],
-      [liht,dark,dark,dark,dark,dark,dark],
-      [liht,liht,liht,liht,liht,liht,liht],
+      [1,1,1,1,1,1,1],
+      [1,0,0,0,0,0,0],
+      [1,0,0,0,0,0,0],
+      [1,1,1,1,1,1,1],
     ]
   },
   V: {
     name: 'V',
-    width: 4,
-    height: 7,
     cols: [
-      [dark,liht,liht,liht,liht,liht,liht],
-      [liht,dark,dark,dark,dark,dark,dark],
-      [liht,dark,dark,dark,dark,dark,dark],
-      [dark,liht,liht,liht,liht,liht,liht],
+      [0,1,1,1,1,1,1],
+      [1,0,0,0,0,0,0],
+      [1,0,0,0,0,0,0],
+      [0,1,1,1,1,1,1],
     ]
   },
   W: {
     name: 'W',
-    width: 7,
-    height: 7,
     cols: [
-      [liht,liht,liht,liht,liht,liht,liht],
-      [dark,liht,dark,dark,dark,dark,dark],
-      [dark,dark,liht,dark,dark,dark,dark],
-      [dark,dark,dark,liht,dark,dark,dark],
-      [dark,dark,liht,dark,dark,dark,dark],
-      [dark,liht,dark,dark,dark,dark,dark],
-      [liht,liht,liht,liht,liht,liht,liht],
+      [1,1,1,1,1,1,1],
+      [1,0,0,0,0,0,0],
+      [1,1,1,1,1,0,0],
+      [1,0,0,0,0,0,0],
+      [1,1,1,1,1,1,1],
     ]
   },
   X: {
     name: 'X',
-    width: 5,
-    height: 5,
     cols: [
-      [liht,dark,dark,dark,liht,dark,dark],
-      [dark,liht,dark,liht,dark,dark,dark],
-      [dark,dark,liht,dark,dark,dark,dark],
-      [dark,liht,dark,liht,dark,dark,dark],
-      [liht,dark,dark,dark,liht,dark,dark],
+      [1,0,0,0,1,0,0],
+      [0,1,0,1,0,0,0],
+      [0,0,1,0,0,0,0],
+      [0,1,0,1,0,0,0],
+      [1,0,0,0,1,0,0],
     ]
+    // cols: [
+    //   [0,0,0,1,0,0,0],
+    //   [0,0,1,0,1,0,0],
+    //   [1,0,0,0,1,0,0],
+    //   [0,1,0,0,1,0,0],
+    //   [0,0,1,1,1,0,0],
+    //   [0,1,0,1,0,0,0],
+    //   [1,0,0,0,1,0,0],
+    // ]
   },
   Y: {
     name: 'Y',
-    width: 5,
-    height: 7,
     cols: [
-      [dark,dark,dark,dark,dark,dark,liht],
-      [dark,dark,dark,dark,dark,liht,dark],
-      [liht,liht,liht,liht,liht,dark,dark],
-      [dark,dark,dark,dark,dark,liht,dark],
-      [dark,dark,dark,dark,dark,dark,liht],
+      [0,0,0,0,0,0,1],
+      [0,0,0,0,0,1,0],
+      [1,1,1,1,1,0,0],
+      [0,0,0,0,0,1,0],
+      [0,0,0,0,0,0,1],
     ]
   },
   Z: {
     name: 'Z',
-    width: 5,
-    height: 7,
     cols: [
-      [liht,dark,dark,dark,liht,dark,dark],
-      [liht,liht,dark,dark,liht,dark,dark],
-      [liht,dark,liht,dark,liht,dark,dark],
-      [liht,dark,dark,liht,liht,dark,dark],
-      [liht,dark,dark,dark,liht,dark,dark],
+      [1,0,0,0,1,0,0],
+      [1,1,0,0,1,0,0],
+      [1,0,1,0,1,0,0],
+      [1,0,0,1,1,0,0],
+      [1,0,0,0,1,0,0],
     ]
   },
   space: {
     name: 'SPACE',
-    width: 3,
-    height: 7,
     cols: [
-      [dark,dark,dark,dark,dark,dark,dark],
-      [dark,dark,dark,dark,dark,dark,dark],
-      [dark,dark,dark,dark,dark,dark,dark],
+      [0,0,0,0,0,0,0],
+      [0,0,0,0,0,0,0],
+      [0,0,0,0,0,0,0],
     ]
   },
-  liht: {
+  1: {
     name: 'ONE',
-    width: 3,
-    height: 7,
     cols: [
-      [liht,dark,dark,dark,dark,liht,dark],
-      [liht,liht,liht,liht,liht,liht,liht],
-      [liht,dark,dark,dark,dark,dark,dark],
+      [1,0,0,0,0,1,0],
+      [1,1,1,1,1,1,1],
+      [1,0,0,0,0,0,0],
+    ]
+  },
+  2: {
+    name: 'TWO',
+    cols: [
+      [1,0,0,0,0,1,0],
+      [1,1,0,0,0,0,1],
+      [1,0,1,0,0,0,1],
+      [1,0,0,1,1,1,0],
+    ]
+  },
+  3: {
+    name: 'THREE',
+    cols: [
+      [1,1,0,0,0,1,1],
+      [1,0,0,0,0,0,1],
+      [1,0,0,1,0,0,1],
+      [1,1,1,1,1,1,1],
+    ]
+  },
+  4: {
+    name: 'FOUR',
+    cols: [
+      [0,0,1,1,0,0,0],
+      [0,0,1,0,1,0,0],
+      [0,0,1,0,0,1,0],
+      [1,1,1,1,1,1,1],
+    ]
+  },
+  5: {
+    name: 'FIVE',
+    cols: [
+      [1,0,0,0,1,1,1],
+      [1,0,0,0,1,0,1],
+      [1,0,0,0,1,0,1],
+      [1,1,1,1,1,0,1],
+    ]
+  },
+  6: {
+    name: 'SIX',
+    cols: [
+      [1,1,1,1,1,1,1],
+      [1,0,0,1,0,0,1],
+      [1,0,0,1,0,0,1],
+      [1,1,1,1,0,0,1],
+    ]
+  },
+  7: {
+    name: 'SEVEN',
+    cols: [
+      [0,0,0,0,1,1,1],
+      [0,0,0,0,0,0,1],
+      [0,0,0,0,0,0,1],
+      [1,1,1,1,1,1,1],
+    ]
+  },
+  8: {
+    name: 'EIGHT',
+    cols: [
+      [1,1,1,1,1,1,1],
+      [1,0,0,1,0,0,1],
+      [1,0,0,1,0,0,1],
+      [1,1,1,1,1,1,1],
+    ]
+  },
+  9: {
+    name: 'NINE',
+    cols: [
+      [1,0,0,1,1,1,1],
+      [1,0,0,1,0,0,1],
+      [1,0,0,1,0,0,1],
+      [1,1,1,1,1,1,1],
+    ]
+  },
+  a: {
+    name: 'HEART',
+    cols: [
+      [0,0,0,1,1,1,0],
+      [0,0,1,1,1,1,1],
+      [0,1,1,1,1,1,1],
+      [1,1,1,1,1,1,0],
+      [0,1,1,1,1,1,1],
+      [0,0,1,1,1,1,1],
+      [0,0,0,1,1,1,0],
+    ]
+  },
+  b: {
+    name: 'square',
+    cols: [
+      [0,0,0,1,0,0,0],
+      [0,0,1,1,1,0,0],
+      [0,1,1,1,1,1,0],
+      [1,1,1,1,1,1,1],
+      [0,1,1,1,1,1,0],
+      [0,0,1,1,1,0,0],
+      [0,0,0,1,0,0,0],
+    ]
+  },
+  c: {
+    name: 'DOT',
+    cols: [
+      [1,0,0,0,0,0,0],
+    ]
+  },
+  d: {
+    name: 'QUESTION MARK',
+    cols: [
+      [0,0,0,0,1,1,1],
+      [1,0,1,0,0,0,1],
+      [0,0,0,1,1,1,1],
+    ]
+  },
+  e: {
+    name: '! MARK',
+    cols: [
+      [1,0,1,1,1,1,1],
+    ]
+  },
+  f: {
+    name: 'PIPE',
+    cols: [
+      [1,1,1,1,1,1,1],
     ]
   },
 }
@@ -324,21 +392,40 @@ const letters = {
 const getLetters = (word) => {
   const array = word.toUpperCase().split('')
   
-  console.log('add numbers')
-  
   const changed = array.map(letter => {
-    const char = letter === ' '
-      ? 'space'
-      : letter
+    // const char = letter === ' '
+    //   ? 'space'
+    //   : letter === '♥'
+    //     ? 'a'
+    //     : letter
+
+    switch (letter) {
+      case ' ':
+        return 'space'
+      case '♥':
+        return 'a'
+      case '♦':
+        return 'b'
+      case '.':
+        return 'c'
+      case '?':
+        return 'd'
+      case '!':
+        return 'e'
+      case '|':
+        return 'f'
+      default:
+        return letter
+    }
       
-    return char
+    // return char
   })
   
   return changed
 }
 
 const getLetterWidth = letter => {
-  return letters[letter].width + 1
+  return letters[letter].cols.length + 1
 }
 
 const getWordWidth = word => {
@@ -365,7 +452,7 @@ export const getWordLights = word => {
   let allLights = [];
 
   getWordArray(word).forEach(letter => {
-    for(let i = 0; i < letter.width; i++) {
+    for(let i = 0; i < letter.cols.length; i++) {
       allLights = [...allLights, letter.cols[i]]
     }
     allLights = [...allLights, emptyCol]
