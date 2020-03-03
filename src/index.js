@@ -4,7 +4,7 @@ import ReactDOM from 'react-dom';
 import './index.scss';
 
 import Header from './components/layout/Header';
-import InsertData from './components/panel/InserData';
+import InsertData from './components/layout/InserData';
 import Panel from './components/panel/Panel';
 
 import { GlobalProvider } from './context/GlobalState';

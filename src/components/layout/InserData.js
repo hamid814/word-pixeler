@@ -20,7 +20,8 @@ const InserData = () => {
 
   const onSubmit = e => {
     e.preventDefault();
-    
+    setWord(wordText)
+    setSpeed(speedValue)
   }
   
   return (

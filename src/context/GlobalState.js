@@ -2,7 +2,7 @@ import React, { createContext, useReducer } from 'react';
 import AppReducer from './AppReducer';
 
 const initialState = {
-  word: 'hamid',
+  word: 'Ha',
   speed: 1,
 };
 
