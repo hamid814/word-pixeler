@@ -3,6 +3,7 @@ import AppReducer from './AppReducer';
 
 const initialState = {
   word: 'hamid',
+  speed: 1,
 };
 
 export const GlobalContext = createContext(initialState);
@@ -10,18 +11,27 @@ export const GlobalContext = createContext(initialState);
 export const GlobalProvider = ({ children }) => {
   const [state, dispatch] = useReducer(AppReducer, initialState);
 
-  const testFunc = () => {
+  const setWord = word => {
     dispatch({
-      type: 'test',
-      payload: 'test-text-2'
+      type: 'set-word',
+      payload: word
+    })
+  }
+
+  const setSpeed = speed => {
+    dispatch({
+      type: 'set-speed',
+      payload: speed
     })
   }
 
   return (
     <GlobalContext.Provider
       value={{
-        test: state.test,
-        testFunc,
+        word: state.word,
+        speed: state.speed,
+        setSpeed,
+        setWord,
       }}
     >
       { children }

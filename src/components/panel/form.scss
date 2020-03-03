@@ -1,0 +1,35 @@
+.form {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+
+  input {
+    border: none;
+    padding: 5px;
+    border-radius: 5px;
+    text-align: center;
+
+    &:focus {
+      outline: none;
+    }
+
+    &[type="submit"] {
+      cursor: pointer;
+      background: #6c9;
+
+      &:hover {
+        filter: brightness(110%);
+      }
+    }
+  }
+
+  .form-group {
+    display: flex;
+    margin: 0 30px;
+    flex-direction: column;
+
+    label {
+      text-align: center;
+    }
+  }
+}

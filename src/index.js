@@ -3,8 +3,9 @@ import ReactDOM from 'react-dom';
 
 import './index.scss';
 
-import Panel from './components/panel/Panel';
 import Header from './components/layout/Header';
+import InsertData from './components/panel/InserData';
+import Panel from './components/panel/Panel';
 
 import { GlobalProvider } from './context/GlobalState';
 
@@ -13,7 +14,10 @@ const App = () => {
   return (
     <>
       <Header />
-      <Panel />
+      <div className="container">
+        <InsertData />
+        <Panel />
+      </div>
     </>
   )
 };

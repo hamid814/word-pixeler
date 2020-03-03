@@ -5,7 +5,7 @@ import './header.scss'
 const Header = () => {
   return (
     <div className='header'>
-      from header
+      word pixeler
     </div>
   )
 }
