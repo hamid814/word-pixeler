@@ -32,11 +32,12 @@ const Panel = () => {
     {order: 16},
     {order: 17},
   ])
-  const [animationSteps] = useState(getAnimationSteps(columns.length, word))
+  const [animationSteps, setAnimationSteps] = useState(getAnimationSteps(columns.length, word))
 
   useEffect(() => {
     setLights(getWordLights(word))
 
+    setAnimationSteps(getAnimationSteps(columns.length, word))
     // eslint-disable-next-line
   }, [word])
 
