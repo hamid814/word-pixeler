@@ -1,10 +1,9 @@
 :root {
   --light-size: 50px;
+  --on-color: #6c9;
 }
 
 .panel {
-  width: calc(--light-size * 16);
-  height: calc(--light-size * 9);
   display: flex;
   flex-direction: row-reverse;
   
@@ -15,10 +14,8 @@
     margin: 4px;
     border-radius: 6px;
 
-    &.on {
-      background: #6c9;
-      background: rgb(228, 143, 15);
-      background: rgb(15, 150, 228);
+    &.on {  
+      background: var(--on-color);
     }
     
     &.off {

@@ -21,8 +21,34 @@
         filter: brightness(110%);
       }
     }
-  }
+    
+    &[type="button"] {
+      cursor: pointer;
+      width: 50px;
+      margin-right: 10px;
+      
+      &:hover {
+        filter: brightness(110%);
+      }
 
+      &.red {
+        background: #ff545c;
+      }
+      
+      &.blue {
+        background: #2785ff;
+      }
+      
+      &.white {
+        background: #dfdfdf;
+      }
+
+      &.green {
+        background: #66cc99;
+      }
+    }
+  }
+  
   .form-group {
     display: flex;
     margin: 0 30px;

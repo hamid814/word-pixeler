@@ -393,12 +393,6 @@ const getLetters = (word) => {
   const array = word.toUpperCase().split('')
   
   const changed = array.map(letter => {
-    // const char = letter === ' '
-    //   ? 'space'
-    //   : letter === '♥'
-    //     ? 'a'
-    //     : letter
-
     switch (letter) {
       case ' ':
         return 'space'
@@ -417,8 +411,6 @@ const getLetters = (word) => {
       default:
         return letter
     }
-      
-    // return char
   })
   
   return changed
