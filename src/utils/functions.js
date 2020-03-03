@@ -324,6 +324,8 @@ const letters = {
 const getLetters = (word) => {
   const array = word.toUpperCase().split('')
   
+  console.log('add numbers')
+  
   const changed = array.map(letter => {
     const char = letter === ' '
       ? 'space'
@@ -333,6 +335,24 @@ const getLetters = (word) => {
   })
   
   return changed
+}
+
+const getLetterWidth = letter => {
+  return letters[letter].width + 1
+}
+
+const getWordWidth = word => {
+  let wordLength = 0;
+  
+  const lettersWidth = getLetters(word).map(letter => {
+    return getLetterWidth(letter)
+  })
+
+  lettersWidth.forEach(width => {
+    wordLength = wordLength + width
+  })
+
+  return wordLength
 }
 
 const getWordArray = word => {
@@ -352,4 +372,12 @@ export const getWordLights = word => {
   })
 
   return allLights
+}
+
+export const getAnimationSteps = (panelLength, word) => {
+  let steps = 0;
+
+  steps = 2 + panelLength + getWordWidth(word)
+
+  return steps
 }

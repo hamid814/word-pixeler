@@ -21,7 +21,7 @@
     "eject": "react-scripts eject",
     "deploy": "gh-pages -d build"
   },
-  "homepage": "https://hamid814.github.io/word-pixeler",
+  "homepage": "https://hamid814.github.io/word-pixeler/",
   "eslintConfig": {
     "extends": "react-app"
   },
