@@ -1,2 +1,1 @@
-hamid's portfolio App
-version 2
+my App

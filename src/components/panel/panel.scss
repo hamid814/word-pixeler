@@ -1,0 +1,21 @@
+:root {
+  --light-size: 50px;
+}
+
+.panel {
+  border: 1px solid red;
+  display: grid;
+  width: calc(--light-size * 16);
+  height: calc(--light-size * 9);
+  grid-template-rows: repeat(9, 1fr);
+  grid-template-columns: repeat(16, 1fr);
+  gap: 0;
+  
+  .panel-light {
+    width: 50px;
+    height: 50px;
+    background: #ddd;
+    margin: 4px;
+    border-radius: 6px;
+  }
+}

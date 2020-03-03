@@ -2,7 +2,7 @@ import React, { createContext, useReducer } from 'react';
 import AppReducer from './AppReducer';
 
 const initialState = {
-  test: 'test text',
+  word: 'hamid',
 };
 
 export const GlobalContext = createContext(initialState);

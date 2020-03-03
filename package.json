@@ -1,7 +1,7 @@
 {
-  "name": "multistep-form",
+  "name": "pixel-word",
   "version": "0.1.0",
-  "description": "form with multi step data entry",
+  "description": "make works to pixel animated",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
