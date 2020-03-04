@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/word-pixeler/static/css/main.a9471c02.chunk.css",
-    "main.js": "/word-pixeler/static/js/main.81aea2d7.chunk.js",
-    "main.js.map": "/word-pixeler/static/js/main.81aea2d7.chunk.js.map",
+    "main.js": "/word-pixeler/static/js/main.b9b9f6c8.chunk.js",
+    "main.js.map": "/word-pixeler/static/js/main.b9b9f6c8.chunk.js.map",
     "runtime-main.js": "/word-pixeler/static/js/runtime-main.496cc290.js",
     "runtime-main.js.map": "/word-pixeler/static/js/runtime-main.496cc290.js.map",
     "static/js/2.364abf90.chunk.js": "/word-pixeler/static/js/2.364abf90.chunk.js",
     "static/js/2.364abf90.chunk.js.map": "/word-pixeler/static/js/2.364abf90.chunk.js.map",
     "index.html": "/word-pixeler/index.html",
-    "precache-manifest.dec7dc947318ba58fd0cb222998b9a44.js": "/word-pixeler/precache-manifest.dec7dc947318ba58fd0cb222998b9a44.js",
+    "precache-manifest.6bffbaa996036811724ed6ffce5c1425.js": "/word-pixeler/precache-manifest.6bffbaa996036811724ed6ffce5c1425.js",
     "service-worker.js": "/word-pixeler/service-worker.js",
     "static/css/main.a9471c02.chunk.css.map": "/word-pixeler/static/css/main.a9471c02.chunk.css.map",
     "static/js/2.364abf90.chunk.js.LICENSE.txt": "/word-pixeler/static/js/2.364abf90.chunk.js.LICENSE.txt"
@@ -17,6 +17,6 @@
     "static/js/runtime-main.496cc290.js",
     "static/js/2.364abf90.chunk.js",
     "static/css/main.a9471c02.chunk.css",
-    "static/js/main.81aea2d7.chunk.js"
+    "static/js/main.b9b9f6c8.chunk.js"
   ]
 }
