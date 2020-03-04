@@ -3,7 +3,7 @@ import AppReducer from './AppReducer';
 
 const initialState = {
   word: '♥',
-  speed: 1,
+  speed: 1.3,
 };
 
 export const GlobalContext = createContext(initialState);
