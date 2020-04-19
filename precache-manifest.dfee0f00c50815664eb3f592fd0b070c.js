@@ -1,11 +1,11 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "875aee4e43b4b116aac52052c728dcb5",
+    "revision": "cb1faa7be7388c6b3068903458575655",
     "url": "/word-pixeler/index.html"
   },
   {
-    "revision": "b2f90abe2a2c02366d93",
-    "url": "/word-pixeler/static/css/main.a9471c02.chunk.css"
+    "revision": "ae19074e5e8e86faa450",
+    "url": "/word-pixeler/static/css/main.b5457b35.chunk.css"
   },
   {
     "revision": "c4ac625ee11c366be5df",
@@ -16,7 +16,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/word-pixeler/static/js/2.364abf90.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "b2f90abe2a2c02366d93",
+    "revision": "ae19074e5e8e86faa450",
     "url": "/word-pixeler/static/js/main.b9b9f6c8.chunk.js"
   },
   {
