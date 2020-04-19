@@ -13,6 +13,7 @@
     background: #ddd;
     margin: 4px;
     border-radius: 6px;
+    transition: 0s;
 
     &.on {  
       background: var(--on-color);
