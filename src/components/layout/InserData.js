@@ -23,7 +23,7 @@ const InserData = (props) => {
       document.body.style.setProperty('--on-color', `#${color}`);
 
     if (name === 'special') {
-      setWord('fuck u');
+      setWord('f u');
       setSpeed(0.7);
       document.body.style.setProperty('--on-color', `#c23`);
     }
